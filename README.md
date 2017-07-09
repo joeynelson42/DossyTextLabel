@@ -48,6 +48,10 @@ dossyLabel.lineBreakMode = .byWordWrapping
 dossyLabel.type("Hello world!\nHow are you today?")
 ```
 
+### More granular modifications
+
+Adjust the speed of the typing by changing ```millisecondsPerLetter```.
+
 ## Meta(l!!!)
 
 Joey Nelson – [@jedmondn](https://twitter.com/jedmondn) – joeyedmondnelson@gmail.com
