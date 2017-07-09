@@ -21,6 +21,10 @@ You can use [CocoaPods](http://cocoapods.org/) to install `DossyText` by adding 
 pod 'DossyText'
 ```
 
+#### Manual 🔧
+You can simply add the ```DossyText.swift``` file to your project
+
+
 To get the full benefits import `DossyText` wherever you import UIKit:
 
 ``` swift
@@ -48,7 +52,7 @@ dossyLabel.lineBreakMode = .byWordWrapping
 dossyLabel.type("Hello world!\nHow are you today?")
 ```
 
-### More granular modifications
+#### More granular modifications
 
 Adjust the speed of the typing by changing ```millisecondsPerLetter```. 70 is a pretty good place to start 🏃🏼.
 
