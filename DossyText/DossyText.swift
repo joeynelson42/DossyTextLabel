@@ -16,20 +16,24 @@ public protocol DossyTextLabelDelegate {
 
 open class DossyTextLabel: UILabel {
     
+    // MARK: - Properties
+    
+    //Public
+    public var delegate: DossyTextLabelDelegate?
+    
+    /// Upon finishing typing the blinking box will (or will not) begin blinking automatically
+    public var blinksWhileIdle: Bool = true
+    
+    /// Adjusts the speed of the typing, 70 is a good place to start
+    public var millisecondsPerLetter = 70
+    
+    // Private
     private enum LabelState {
         case typing
         case blinking
         case idle
     }
     
-    // MARK: - Properties
-    
-    //Public
-    public var delegate: DossyTextLabelDelegate?
-    public var blinksWhileIdle: Bool = true
-    public var millisecondsPerLetter = 70
-    
-    // Private
     private var state: LabelState = .idle
     private var mostRecentAddition: String = ""
     private var currentText: String = ""
@@ -39,19 +43,28 @@ open class DossyTextLabel: UILabel {
     private var timer: Timer!
     
     // MARK: - Blinking
+    
+    /// Will begin the blinking box and won't stop until stopBlinking() is called
     public func blinkIndefinitely() {
         state = .blinking
-        
         blink()
-        
         blinking = true
     }
     
+    
+    /**
+     Blinks the blnking box for specified TimeInterval.
+     - Parameter interval:   The specified interval.
+     */
     public func blink(forInterval interval: TimeInterval) {
         blinkIndefinitely()
         timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(stopBlinking), userInfo: nil, repeats: false)
     }
     
+    /**
+     Blinks the blnking box recursively.
+     - Parameter repeats: If enabled the blinking will blink indefinitely.
+     */
     private func blink(_ repeats: Bool = true) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(250)) {
             if self.text == self.blinkingText {
@@ -68,12 +81,18 @@ open class DossyTextLabel: UILabel {
         }
     }
     
+    /// Will force the blinking box to stop blinking
     public func stopBlinking() {
         state = .idle
     }
     
     
     // MARK: - Typing
+    
+    /**
+     Types out a given string
+     - Parameter stringToType: The given string to be typed out.
+     */
     public func type(_ stringToType: String) {
         state = .typing
         mostRecentAddition = stringToType
@@ -81,6 +100,7 @@ open class DossyTextLabel: UILabel {
         type()
     }
     
+    /// Calculates and types out the next character to match currentText to fullText, upon typing out all of fullText the recursion will end.
     private func type() {
         if fullText == currentText {
             typingEnded()
@@ -96,6 +116,7 @@ open class DossyTextLabel: UILabel {
         }
     }
     
+    /// Called when the typing animation has ended.
     private func typingEnded() {
         blinkingText = fullText
         
@@ -109,6 +130,8 @@ open class DossyTextLabel: UILabel {
     }
     
     // MARK: - Idling
+    
+    /// Brings everything to a halt.
     public func idle(){
         stopBlinking()
         text = fullText
