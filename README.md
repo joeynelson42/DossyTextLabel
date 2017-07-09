@@ -1,5 +1,5 @@
 # DossyTextLabel 📟
-> A subclass of UILabel reminiscent of [Strong Bad's faithful Tandy 400](http://www.homestarrunner.com/sbemail10.html).
+> A subclass of UILabel reminiscent of [Strong Bad's faithful Tandy 400](http://www.homestarrunner.com/sbemail10.html) and MS-DOS of yore.
 
 
 ![](https://media.giphy.com/media/b7HBTefES2Rpe/giphy.gif)
