@@ -25,6 +25,8 @@ pod 'DossyText'
 You can simply add the ```DossyText.swift``` file to your project
 
 
+## Usage
+
 To get the full benefits import `DossyText` wherever you import UIKit:
 
 ``` swift
@@ -32,7 +34,6 @@ import UIKit
 import DossyText
 ```
 
-## Usage
 
 Simply create an instance of DossyTextLabel and add it to your view hierarchy in yo:
 ```swift
