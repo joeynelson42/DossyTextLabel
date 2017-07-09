@@ -57,6 +57,8 @@ dossyLabel.type("Hello world!\nHow are you today?")
 
 Adjust the speed of the typing by changing ```millisecondsPerLetter```. 70 is a pretty good place to start 🏃🏼.
 
+```blinksWhileIdle``` -- When the typing ends the blinking animation will (or will not) automatically start.
+
 ## Meta(l!!! 🎸🎸🎸) 
 
 Joey Nelson – [@jedmondn](https://twitter.com/jedmondn) – joeyedmondnelson@gmail.com
