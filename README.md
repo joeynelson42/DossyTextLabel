@@ -35,7 +35,7 @@ import DossyText
 ```
 
 
-Simply create an instance of DossyTextLabel and add it to your view hierarchy in yo:
+Simply create an instance of DossyTextLabel and add it to your view hierarchy however you would like:
 ```swift
 let dossyLabel = DossyTextLabel()
 ```
@@ -57,7 +57,7 @@ dossyLabel.type("Hello world!\nHow are you today?")
 
 Adjust the speed of the typing by changing ```millisecondsPerLetter```. 70 is a pretty good place to start 🏃🏼.
 
-## Meta(l!!!)
+## Meta(l!!! 🎸🎸🎸) 
 
 Joey Nelson – [@jedmondn](https://twitter.com/jedmondn) – joeyedmondnelson@gmail.com
 
