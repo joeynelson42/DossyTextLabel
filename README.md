@@ -27,3 +27,9 @@ To get the full benefits import `DossyText` wherever you import UIKit
 import UIKit
 import DossyText
 ```
+
+## Usage
+
+```swift
+let dossyLabel = DossyTextLabel()
+```
