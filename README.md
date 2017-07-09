@@ -47,3 +47,9 @@ Type away:
 ```swift
 dossyLabel.type("Hello world!\nHow are you today?")
 ```
+
+## Meta
+
+Joey Nelson – [@jedmondn](https://twitter.com/jedmondn) – joeyedmondnelson@gmail.com
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
