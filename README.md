@@ -48,7 +48,7 @@ Type away:
 dossyLabel.type("Hello world!\nHow are you today?")
 ```
 
-## Meta
+## Meta(l!!!)
 
 Joey Nelson – [@jedmondn](https://twitter.com/jedmondn) – joeyedmondnelson@gmail.com
 
