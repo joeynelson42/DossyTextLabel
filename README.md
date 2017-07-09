@@ -1,4 +1,4 @@
-# DossyTextLabel
+# DossyTextLabel 📟
 > A subclass of UILabel reminiscent of [Strong Bad's faithful Tandy 400](http://www.homestarrunner.com/sbemail10.html).
 
 
@@ -14,14 +14,14 @@
 
 ## Installation
 
-#### CocoaPods
+#### CocoaPods ☕️
 You can use [CocoaPods](http://cocoapods.org/) to install `DossyText` by adding it to your `Podfile`:
 
 ```ruby
 pod 'DossyText'
 ```
 
-To get the full benefits import `DossyText` wherever you import UIKit
+To get the full benefits import `DossyText` wherever you import UIKit:
 
 ``` swift
 import UIKit
@@ -43,14 +43,14 @@ dossyLabel.lineBreakMode = .byWordWrapping
 ```
 
 
-...and type away!:
+...and type away! ⌨️:
 ```swift
 dossyLabel.type("Hello world!\nHow are you today?")
 ```
 
 ### More granular modifications
 
-Adjust the speed of the typing by changing ```millisecondsPerLetter```.
+Adjust the speed of the typing by changing ```millisecondsPerLetter```. 70 is a pretty good place to start 🏃🏼.
 
 ## Meta(l!!!)
 
