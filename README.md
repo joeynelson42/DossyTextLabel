@@ -30,7 +30,7 @@ import DossyText
 
 ## Usage
 
-Simply create an instance of DossyTextLabel and add it to your view hierarchy:
+Simply create an instance of DossyTextLabel and add it to your view hierarchy in yo:
 ```swift
 let dossyLabel = DossyTextLabel()
 ```
@@ -43,7 +43,7 @@ dossyLabel.lineBreakMode = .byWordWrapping
 ```
 
 
-Type away:
+...and type away!:
 ```swift
 dossyLabel.type("Hello world!\nHow are you today?")
 ```
