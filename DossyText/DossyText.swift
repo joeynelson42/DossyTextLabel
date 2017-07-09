@@ -14,8 +14,8 @@ public protocol DossyTextLabelDelegate {
 }
 
 extension DossyTextLabelDelegate {
-  func dossyTextLabel(_ label: DossyTextLabel, didFinishTypingText text: String) {}
-  func dossyTextLabelDidFinishBlinking(_ label: DossyTextLabel) {}
+    func dossyTextLabel(_ label: DossyTextLabel, didFinishTypingText text: String) {}
+    func dossyTextLabelDidFinishBlinking(_ label: DossyTextLabel) {}
 }
 
 open class DossyTextLabel: UILabel {
