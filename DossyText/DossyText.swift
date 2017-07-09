@@ -8,10 +8,14 @@
 
 import UIKit
 
-@objc
 public protocol DossyTextLabelDelegate {
-    @objc optional func DossyTextLabel(_ label: DossyTextLabel, didFinishTypingText text: String)
-    @objc optional func didFinishBlinking(_ label: DossyTextLabel)
+    func dossyTextLabel(_ label: DossyTextLabel, didFinishTypingText text: String)
+    func dossyTextLabelDidFinishBlinking(_ label: DossyTextLabel)
+}
+
+extension DossyTextLabelDelegate {
+  func dossyTextLabel(_ label: DossyTextLabel, didFinishTypingText text: String) {}
+  func dossyTextLabelDidFinishBlinking(_ label: DossyTextLabel) {}
 }
 
 open class DossyTextLabel: UILabel {
@@ -76,7 +80,7 @@ open class DossyTextLabel: UILabel {
             if self.state == .blinking && repeats {
                 self.blink()
             } else {
-                self.delegate?.didFinishBlinking?(self)
+                self.delegate?.dossyTextLabelDidFinishBlinking(self)
             }
         }
     }
@@ -125,8 +129,8 @@ open class DossyTextLabel: UILabel {
         } else {
             state = .idle
         }
-        
-        delegate?.DossyTextLabel?(self, didFinishTypingText: mostRecentAddition)
+      
+        delegate?.dossyTextLabel(self, didFinishTypingText: mostRecentAddition)
     }
     
     // MARK: - Idling
