@@ -30,6 +30,20 @@ import DossyText
 
 ## Usage
 
+Simply create an instance of DossyTextLabel and add it to your view hierarchy:
 ```swift
 let dossyLabel = DossyTextLabel()
+```
+
+Modify it as you would any UILabel:
+```swift
+dossyLabel.textColor = UIColor.cyan
+dossyLabel.numberOfLines = 0
+dossyLabel.lineBreakMode = .byWordWrapping
+```
+
+
+Type away:
+```swift
+dossyLabel.type("Hello world!\nHow are you today?")
 ```
