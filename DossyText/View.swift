@@ -7,10 +7,6 @@
 //
 
 import Foundation
-//
-//  BaseView.swift
-//
-
 import UIKit
 
 class View: UIView {
