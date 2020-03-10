@@ -14,5 +14,6 @@ DESC
 
   s.ios.deployment_target = '10.0'
   s.source_files = 'Source/DossyTextLabel.swift'
+  s.swift_version = '4.2'
 
 end
