@@ -5,13 +5,6 @@
 ![](https://media.giphy.com/media/S7RGj5ZBuLt3SEr6Iy/giphy.gif)
 
 
-
-## Requirements
-
-- Swift 3.0
-- iOS 8.0+
-- Xcode 8.0
-
 ## Installation
 
 #### Manual (read: Easy)
