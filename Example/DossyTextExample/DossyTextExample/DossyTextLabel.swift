@@ -3,9 +3,8 @@
 //  DossyText
 //
 //  Created by Joey Nelson on 7/9/17.
-//  Copyright © 2017 NelsonJE. All rights reserved.
+//  Copyright © 2017 nelsonje. All rights reserved.
 //
-
 import UIKit
 
 public protocol DossyTextLabelDelegate {
@@ -55,7 +54,6 @@ open class DossyTextLabel: UILabel {
         blinking = true
     }
     
-    
     /**
      Blinks the blnking box for specified TimeInterval.
      - Parameter interval:   The specified interval.
@@ -86,7 +84,7 @@ open class DossyTextLabel: UILabel {
     }
     
     /// Will force the blinking box to stop blinking
-    public func stopBlinking() {
+    @objc public func stopBlinking() {
         state = .idle
     }
     
@@ -113,7 +111,7 @@ open class DossyTextLabel: UILabel {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(millisecondsPerLetter)) {
             let stripped = self.fullText.replacingOccurrences(of: self.currentText, with: "")
-            guard let char = stripped.characters.first else { return }
+            guard let char = stripped.first else { return }
             self.currentText = self.currentText + String(describing: char)
             self.text = self.currentText
             self.type()
@@ -142,4 +140,3 @@ open class DossyTextLabel: UILabel {
         state = .idle
     }
 }
-
