@@ -14,26 +14,18 @@
 
 ## Installation
 
-#### CocoaPods ☕️
+#### Manual (read: Easy)
+You can simply add the ```DossyText.swift``` file to your project
+
+#### CocoaPods (read: Overkill)
 You can use [CocoaPods](http://cocoapods.org/) to install `DossyText` by adding it to your `Podfile`:
 
 ```ruby
 pod 'DossyText'
 ```
 
-#### Manual 🔧
-You can simply add the ```DossyText.swift``` file to your project
-
 
 ## Usage
-
-To get the full benefits import `DossyText` wherever you import UIKit:
-
-``` swift
-import UIKit
-import DossyText
-```
-
 
 Simply create an instance of DossyTextLabel and add it to your view hierarchy however you would like:
 ```swift
