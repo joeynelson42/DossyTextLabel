@@ -13,6 +13,6 @@ DESC
   s.source           = { :git => 'https://github.com/joeynelson42/DossyTextLabel.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
-  s.source_files = 'DossyTextLabel/Source/DossyTextLabel.swift'
+  s.source_files = 'Source/DossyTextLabel.swift'
 
 end
